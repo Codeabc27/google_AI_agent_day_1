@@ -6,7 +6,7 @@ try:
     GOOGLE_API_KEY = UserSecretsClient().get_secret("GOOGLE_API_KEY")
     os.environ["GOOGLE_API_KEY"] = GOOGLE_API_KEY
     os.environ["GOOGLE_GENAI_USE_VERTEXAI"] = "FALSE"
-    print("✅ Gemini API key setup complete.")
+    print(" Gemini API key setup complete.")
 except Exception as e:
     print(f"🔑 Authentication Error: Make sure 'GOOGLE_API_KEY' is added to your Kaggle secrets. Details: {e}")
 
@@ -15,7 +15,7 @@ from google.adk.agents import Agent
 from google.adk.runners import InMemoryRunner
 from google.adk.tools import google_search
 
-print("✅ ADK components imported successfully.")
+print(" ADK components imported successfully.")
 
 # Helper to get ADK web UI proxy URL in Kaggle Notebooks
 from IPython.core.display import display, HTML
@@ -56,7 +56,7 @@ def get_adk_proxy_url():
     display(HTML(styled_html))
     return url_prefix
 
-print("✅ Helper functions defined.")
+print(" Helper functions defined.")
 
 # Define ADK agent
 root_agent = Agent(
@@ -67,7 +67,7 @@ root_agent = Agent(
     tools=[google_search],
 )
 
-print("✅ Root Agent defined.")
+print(" Root Agent defined.")
 
 # Create runner object
 runner = InMemoryRunner(agent=root_agent)
