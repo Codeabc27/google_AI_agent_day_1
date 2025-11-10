@@ -1,41 +1,65 @@
-Google ADK Agent Setup on Kaggle
-Welcome to this simple project where you can set up and run a helpful AI assistant using Google’s Agent Development Kit (ADK) and Gemini API—all within a Kaggle notebook!
+# Google ADK Agent Setup on Kaggle
 
-What’s this project about?
-This project shows you how to connect to Google’s ADK using your Gemini API key and create a smart assistant that can answer questions, search Google, and help you get information on the fly. It’s perfect if you want to explore conversational AI with cutting-edge Google models, right from your Kaggle environment.
+Welcome to this project where you can set up and run a helpful AI assistant using Google's Agent Development Kit (ADK) and Gemini API—right inside a Kaggle notebook!
 
-How to get started
-Get your Google API key ready
-Before running, you need a Gemini API key from Google. Once you have it, go to your Kaggle notebook → Settings → Secrets and add:
+---
 
-Key: GOOGLE_API_KEY
+## About This Project
 
-Value: your actual API key (keep this private!)
+This project demonstrates how to use Google’s ADK together with Gemini API keys to build a smart assistant that can answer questions, search Google, and provide information interactively inside Kaggle.
 
-Upload the script
-Upload the file google_adk_agent_setup.py to your Kaggle notebook workspace.
+---
 
-Run the code
-Run the cells step-by-step to set up the agent and start the assistant. The script also includes a helper for opening the ADK web UI in your browser so you can interact with the assistant nicely.
+## Getting Started
 
-Ask your assistant
-Use the provided example lines to start chatting with the agent asynchronously. You can ask it anything like “What is the Agent Development Kit from Google?” or “What languages does the SDK support?” and get smart answers in return.
+### 1. Get Your Google API Key
 
-Live demo tips
-The ADK web UI runs separately. Use the helper function get_adk_proxy_url() to get a clickable link that opens the interface.
+You need a Gemini API key from Google. Once you have it:
 
-Make sure to run the web UI cell before clicking that link, or you might run into errors.
+- Open your Kaggle notebook.
+- Navigate to **Settings > Secrets**.
+- Add a new secret with the key: `GOOGLE_API_KEY` and set your key as the value.
+- Keep this key private!
 
-The example usage runs asynchronously, so if you’re running in Kaggle, be sure to use asyncio or run it in an async-friendly environment.
+### 2. Upload the Script
 
-Why this project?
-Explore Google’s latest AI agent toolkit with real API integration
+Upload the `google_adk_agent_setup.py` script to your Kaggle notebook workspace.
 
-See how to securely handle API keys with Kaggle Secrets
+### 3. Run the Setup
 
-Learn how to build interactive AI apps inside notebooks
+Run the notebook cells step by step to:
 
-Quickly prototype intelligent assistants with web UI support
+- Set up the API key and environment variables.
+- Import and initialize the Google ADK agent.
+- Use the helper function to get the ADK web UI URL to interact with the agent.
 
-Need help or want to contribute?
-Feel free to open issues or pull requests if you find bugs or want to improve the example. Happy coding and exploring AI agents!
+### 4. Start Chatting with Your Assistant
+
+Use the example async code snippet to ask your assistant any questions you want.
+
+---
+
+## Live Demo Tips
+
+- Use the `get_adk_proxy_url()` function to get a clickable link to open the ADK Web UI.
+- Make sure you start the ADK Web UI service in a separate cell **before** clicking the link.
+- Use Python's `asyncio` to run your queries asynchronously within the Kaggle environment.
+
+---
+
+## Why This Project?
+
+- Learn to use Google’s latest AI agent tools with real API integration.
+- See how to securely manage API keys using Kaggle Secrets.
+- Prototype intelligent assistants quickly inside notebooks.
+- Get hands-on experience with interactive AI interfaces.
+
+---
+
+## Contributing & Support
+
+Feel free to open issues if you encounter bugs or want to suggest improvements. Contributions are welcome!
+
+Happy coding and exploring AI agents! 🚀
+
+---
