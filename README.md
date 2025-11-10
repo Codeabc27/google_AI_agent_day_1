@@ -1,5 +1,3 @@
-# google_AI_agent_day_1
-
 
 # Google ADK Agent Setup on Kaggle
 
