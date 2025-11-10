@@ -1,23 +1,41 @@
+Google ADK Agent Setup on Kaggle
+Welcome to this simple project where you can set up and run a helpful AI assistant using Google’s Agent Development Kit (ADK) and Gemini API—all within a Kaggle notebook!
 
-# Google ADK Agent Setup on Kaggle
+What’s this project about?
+This project shows you how to connect to Google’s ADK using your Gemini API key and create a smart assistant that can answer questions, search Google, and help you get information on the fly. It’s perfect if you want to explore conversational AI with cutting-edge Google models, right from your Kaggle environment.
 
-This project demonstrates how to use the Google Agent Development Kit (ADK) with Gemini API for question answering in Kaggle notebooks.
+How to get started
+Get your Google API key ready
+Before running, you need a Gemini API key from Google. Once you have it, go to your Kaggle notebook → Settings → Secrets and add:
 
-## Setup Instructions
+Key: GOOGLE_API_KEY
 
-1. **Add your Google API key to Kaggle Secrets**  
-   - Go to your Kaggle notebook → Settings → Secrets  
-   - Add key: `GOOGLE_API_KEY` with your Gemini API key as the value
+Value: your actual API key (keep this private!)
 
-2. **Upload `google_adk_agent_setup.py` to Kaggle notebook**
+Upload the script
+Upload the file google_adk_agent_setup.py to your Kaggle notebook workspace.
 
-3. **Run the notebook cells**  
-   - Import and setup the agent  
-   - Run the helper function `get_adk_proxy_url()` to get the proxy UI URL for visual interface  
-   - Run the ADK web UI in a separate cell (e.g., `!adk web start ...` as per Google docs)  
-   - Use agent runner to query questions asynchronously
+Run the code
+Run the cells step-by-step to set up the agent and start the assistant. The script also includes a helper for opening the ADK web UI in your browser so you can interact with the assistant nicely.
 
-## Live Demo
+Ask your assistant
+Use the provided example lines to start chatting with the agent asynchronously. You can ask it anything like “What is the Agent Development Kit from Google?” or “What languages does the SDK support?” and get smart answers in return.
 
-Use the example code snippet below in Kaggle (async context):
+Live demo tips
+The ADK web UI runs separately. Use the helper function get_adk_proxy_url() to get a clickable link that opens the interface.
 
+Make sure to run the web UI cell before clicking that link, or you might run into errors.
+
+The example usage runs asynchronously, so if you’re running in Kaggle, be sure to use asyncio or run it in an async-friendly environment.
+
+Why this project?
+Explore Google’s latest AI agent toolkit with real API integration
+
+See how to securely handle API keys with Kaggle Secrets
+
+Learn how to build interactive AI apps inside notebooks
+
+Quickly prototype intelligent assistants with web UI support
+
+Need help or want to contribute?
+Feel free to open issues or pull requests if you find bugs or want to improve the example. Happy coding and exploring AI agents!
